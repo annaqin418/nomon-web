@@ -1,0 +1,20 @@
+{
+  "name": "Nomon Web",
+  "version": "1.0",
+  "description": "Single-switch web browsing",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html"
+    // "default_icon": "hello_extensions.png"
+  },
+  "permissions": ["<all_urls>"],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens popup.html"
+    }
+  }
+}
