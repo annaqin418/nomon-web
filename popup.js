@@ -95,7 +95,7 @@ chrome.extension.onRequest.addListener(function(links) {
   }
   allLinks.sort();
   visibleLinks = allLinks;
-  showLinks();
+  // showLinks();
 });
 
 // Set up event handlers and inject send_links.js into all frames in the active
@@ -113,6 +113,7 @@ window.onload = function() {
       // chrome.tabs.executeScript(
       //   activeTabs[0].id, {file: 'send_links.js', allFrames: true});
       chrome.tabs.executeScript(null,{file: "highlight.js"});
+      chrome.tabs.executeScript(null,{file: "select_link.js"});
     });
   });
 };
