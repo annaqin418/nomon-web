@@ -15,6 +15,6 @@ for (let i = 0; i < links.length; i++) {
         delay: i % 10 * 500,
         duration: 3000,
         iterations: Infinity,
-        easing: 'ease-in'
+        easing: 'linear'
     })
 }
