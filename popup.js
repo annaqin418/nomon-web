@@ -112,7 +112,7 @@ window.onload = function() {
                       function(activeTabs) {
       // chrome.tabs.executeScript(
       //   activeTabs[0].id, {file: 'send_links.js', allFrames: true});
-      chrome.tabs.executeScript(null,{file: "highlight.js"});
+      // chrome.tabs.executeScript(null,{file: "highlight.js"});
       chrome.tabs.executeScript(null,{file: "select_link.js"});
     });
   });
