@@ -1,10 +1,3 @@
-// var allLinks = []
-
-// chrome.extension.onRequest.addListener(function(links) {
-//   for (let link of links) {
-//     allLinks.push(link);
-//   }
-// });
 
 function highlight(indices) {
   // first clear previous highlighting

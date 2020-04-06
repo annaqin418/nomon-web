@@ -1,6 +1,8 @@
 # nomon-web
 
 ## Miscellaneous Notes
+may need jquery instead - rewriting what already have?
+
 Keyboard shortcut to activate (ctrl shift f) - maybe something diff
 document.getElementById('links');
 sample: Download Selected Links - Select links on a page and download them.
@@ -29,6 +31,22 @@ also maybe https://stackoverflow.com/questions/24041504/chrome-extension-is-it-p
 
 ## References
 youtube tutorial for general extension stuff: https://www.youtube.com/playlist?list=PLC3y8-rFHvwg2-q6Kvw3Tl_4xhxtIaNlY
+
+------------------------------------------
+## (04/05):
+
+### Notes
+Changed popup.js to popup2.js
+Moved to content script (so no longer uses popup at all. consider parameter customization)
+
+Limitations:
+Selection of more onscreen features
+
+Further work: a persistent popup on the page? place additional buttons
+Scroll (pagedown), right-click, go back a page, other browser management 
+Integration with Nomon keyboard
+
+IMPT: Need to source all the code I borrowed/adapted!
 
 ------------------------------------------
 ## (03/08):
