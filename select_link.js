@@ -15,7 +15,7 @@ function highlight(indices) {
         { borderLeftColor: '#000' }
     ], {
         // timing
-        delay: i % 10 * 500,
+        delay: i % 6 * 500,
         duration: 3000,
         iterations: Infinity,
         easing: 'linear'
@@ -25,9 +25,14 @@ function highlight(indices) {
 
 function selectLink(e) {
   e = e || window.event;
-  if (e.keyCode == '16') { // shift key
-    let narrowed = []
+  if (e.keyCode == '192') { // '16') { // shift key vs ` key
+    if (curr.length == initLen && !toggledOn) {
+      highlight(curr)
+      toggledOn = true
+      return
+    }
 
+    let narrowed = []
     for (let indexVal of curr) {
       let curColor = getComputedStyle(links[indexVal]).borderLeftColor
       let rgb = curColor.match(/\d+/g) // witchcraft
@@ -44,17 +49,14 @@ function selectLink(e) {
     curr = narrowed
     highlight(curr)
   }
-
-  // *** activate/deactivate as desired?
-  // if (e.keyCode == '74') { // 'j'
-  //   chrome.browserAction.disable()
-  // }
 }
 
 
-const threshold = 210 // seems like i can do 230-240
-var links = document.getElementsByTagName('a') // all links on page. const? 
+const threshold = 210 // can get approx 230-240 with focus
+const links = document.getElementsByTagName('a') // all links on page
 var curr = []
-for (let i = 0; i < links.length; i++) curr.push(i)
-highlight(curr)
+var toggledOn = false
+const initLen = links.length
+for (let i = 0; i < initLen; i++) curr.push(i)
+
 document.onkeydown = selectLink;
