@@ -1,5 +1,19 @@
 # nomon-web
 
+## (04/20):
+Test sites: wikipedia color, wiki glsl, cnn.com, yahoo.com
+Fixed toggling on!
+
+TODO: Evaluation with built in single-switch
+
+TODO: Finish presentation!! 
+- Make diagrams
+- Get screenshots
+- Finish evaluation
+
+TODO: Paper progress
+
+------------------------------------------
 ## (04/13):
 Realized that my thought about persistence across pages was actually somewhat erroneous. 
 It would actually be better if upon reload, the highlighting was off by default (because it's way too cluttering and distracting to use normally), and only turned on when you made a first switch press. So, something more similar to what I originally had. 
