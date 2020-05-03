@@ -14,10 +14,6 @@
       "js": ["select_link.js"]
     }
   ],
-  "browser_action": {
-    // "default_popup": "popup.html"
-    // "default_icon": "hello_extensions.png"
-  },
   "permissions": ["<all_urls>"],
   "commands": {
     "_execute_browser_action": {

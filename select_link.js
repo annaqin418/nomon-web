@@ -11,21 +11,21 @@ function highlight(indices) {
     links[indices[i]].animate([
         // keyframes
         { borderLeftColor: '#000' },
-        { borderLeftColor: '#FFF' },
-        { borderLeftColor: '#000' }
+        { borderLeftColor: '#FFF' }
     ], {
         // timing
         delay: i % 6 * 500,
-        duration: 3000,
+        duration: 1500,
         iterations: Infinity,
-        easing: 'linear'
+        easing: 'linear',
+        direction: 'alternate'
     })
   }
 }
 
 function selectLink(e) {
   e = e || window.event;
-  if (e.keyCode == '192') { // '16') { // shift key vs ` key
+  if (e.keyCode == '20') { // CAPSLOCK vs '192') { // '16') { // shift key vs ` key
     if (curr.length == initLen && !toggledOn) {
       highlight(curr)
       toggledOn = true
@@ -51,12 +51,13 @@ function selectLink(e) {
   }
 }
 
-
+// initialization
 const threshold = 210 // can get approx 230-240 with focus
 const links = document.getElementsByTagName('a') // all links on page
 var curr = []
 var toggledOn = false
 const initLen = links.length
+console.log(initLen); // for eval
 for (let i = 0; i < initLen; i++) curr.push(i)
 
 document.onkeydown = selectLink;
