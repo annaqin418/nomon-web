@@ -1,5 +1,12 @@
 # nomon-web
 
+## (05/03):
+Implemented confirmation click, which handles erroneous selection! 
+Investigate minor visual bug: after confirmation animation, Nomon animation for that element restarts. 
+
+TODO: remove console.log statements, clean up manifest
+
+------------------------------------------
 ## (04/20):
 Test sites: wikipedia color, wiki glsl, cnn.com, yahoo.com
 Fixed toggling on!
@@ -12,6 +19,8 @@ TODO: Finish presentation!!
 - Finish evaluation
 
 TODO: Paper progress
+
+NOTE: Check ongoing notes of weekly status update presentations!
 
 ------------------------------------------
 ## (04/13):
